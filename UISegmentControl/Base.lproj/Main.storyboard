@@ -28,6 +28,9 @@
                                             <segment title="First"/>
                                             <segment title="Second"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="choiceSegment:" destination="BYZ-38-t0r" eventType="valueChanged" id="AlE-ab-C2W"/>
+                                        </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UgN-dw-HRs">
                                         <rect key="frame" x="76" y="221" width="269" height="20.5"/>
@@ -57,6 +60,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="label" destination="UgN-dw-HRs" id="SVs-Ih-PB4"/>
                         <outlet property="segmentControl" destination="YDa-ss-2iq" id="FBT-cx-y4a"/>
                     </connections>
                 </viewController>
