@@ -1,24 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UISegmentControl" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9TK-iv-xkF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YDa-ss-2iq">
+                                        <rect key="frame" x="54" y="124" width="306" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="k6q-QP-Ryf"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UgN-dw-HRs">
+                                        <rect key="frame" x="76" y="221" width="269" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.25972915145804087" green="0.51402235522712636" blue="0.26489301049848663" alpha="0.59453203888977468" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="UgN-dw-HRs" firstAttribute="top" secondItem="YDa-ss-2iq" secondAttribute="bottom" constant="67" id="Bfe-wd-FLM"/>
+                                    <constraint firstItem="YDa-ss-2iq" firstAttribute="leading" secondItem="9TK-iv-xkF" secondAttribute="leading" constant="54" id="CZm-gO-hpf"/>
+                                    <constraint firstAttribute="trailing" secondItem="UgN-dw-HRs" secondAttribute="trailing" constant="69" id="HwK-op-1Mx"/>
+                                    <constraint firstAttribute="trailing" secondItem="YDa-ss-2iq" secondAttribute="trailing" constant="54" id="N4x-7T-UWB"/>
+                                    <constraint firstItem="UgN-dw-HRs" firstAttribute="leading" secondItem="9TK-iv-xkF" secondAttribute="leading" constant="76" id="QUB-aL-kmL"/>
+                                    <constraint firstItem="YDa-ss-2iq" firstAttribute="top" secondItem="9TK-iv-xkF" secondAttribute="top" constant="124" id="V5r-Io-vpx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="9TK-iv-xkF" secondAttribute="bottom" id="3IY-Gb-lXi"/>
+                            <constraint firstItem="9TK-iv-xkF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6fZ-tL-XlN"/>
+                            <constraint firstItem="9TK-iv-xkF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HIj-Mr-vvy"/>
+                            <constraint firstItem="9TK-iv-xkF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VMR-2O-HdQ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="segmentControl" destination="YDa-ss-2iq" id="FBT-cx-y4a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="73.660714285714278"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
