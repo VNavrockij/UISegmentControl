@@ -48,7 +48,7 @@
                                         </connections>
                                     </slider>
                                 </subviews>
-                                <color key="backgroundColor" red="0.25972915145804087" green="0.51402235522712636" blue="0.26489301049848663" alpha="0.59453203888977468" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.25972915145804087" green="0.51402235522712636" blue="0.26489301049848663" alpha="0.89129348028273814" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="nxQ-4P-Zcz" secondAttribute="trailing" constant="54" id="4V2-eo-bTs"/>
                                     <constraint firstItem="UgN-dw-HRs" firstAttribute="top" secondItem="YDa-ss-2iq" secondAttribute="bottom" constant="67" id="Bfe-wd-FLM"/>

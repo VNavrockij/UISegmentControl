@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        slider.value = 1
+        
 //        label.isHidden = true
         label.text = String(slider.value)
         label.font = label.font.withSize(20)
@@ -24,8 +26,8 @@ class ViewController: UIViewController {
         
         segmentControl.insertSegment(withTitle: "Third", at: 2, animated: true)
         
-        slider.minimumValue = 1
-        slider.maximumValue = 100
+        slider.minimumValue = 0
+        slider.maximumValue = 1
         slider.minimumTrackTintColor = .yellow
         slider.maximumTrackTintColor = .red
         slider.tintColor = .blue
@@ -52,7 +54,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func sliderAction(_ sender: UISlider) {
+        label.text = String(sender.value)
         
+        let bgColor = self.view.backgroundColor
+        self.view.backgroundColor = bgColor?.withAlphaComponent(CGFloat(sender.value))
     }
 }
 
